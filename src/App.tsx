@@ -3,6 +3,7 @@ import { IRoute } from "./core/routes/route";
 import { Route, Switch, Redirect, RouteComponentProps, withRouter } from "react-router-dom";
 import Page1 from "Components/pages/page1";
 import AsyncComponent from "./core/components/async.component";
+import { Link } from "react-router-dom";
 //import AsyncComponent from "./core/components/async.component";
 
 class App extends React.Component<AppProps, AppState> {
@@ -42,6 +43,13 @@ class App extends React.Component<AppProps, AppState> {
                         })
                     }
                 </Switch>
+                <div>
+                   
+                        <div><Link to="/">App</Link></div>
+                        <div><Link to="/page1">Page 1</Link></div>
+                        <div><Link to="/page2">Page 2</Link></div>
+                        <div><Link to="/datapage">Data Page</Link></div>
+                </div>
             </div>
         )
     }
